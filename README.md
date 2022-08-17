@@ -1,4 +1,4 @@
-# my-pushup-coach
+# My Pushup Coach
 A web app that uses machine learning to critique your form while you do push-ups. https://my-pushup-coach.herokuapp.com/
 
 The "Data" folder contains all data that my models were trained on.
