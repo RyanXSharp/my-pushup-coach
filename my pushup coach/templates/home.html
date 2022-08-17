@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block links %}
+  <a href="{{ url_for('how_i_work') }}">How I Work</a>
+{% endblock %}
+
+{% block content %}  
+  <h1>Choose an option below.</h1>
+  <ol type="1">
+      <li>Upload a video.</li>
+      <br>
+      <form action = "{{ url_for('video_choice') }}" method = "POST" enctype = "multipart/form-data">
+           <input type = "file" name = "file" />
+           <input type = "submit"/>
+      </form>
+      <br>
+      <li>Use the demo video.</li>
+      <br>
+      <form action = "{{ url_for('video_choice') }}" method = "POST" enctype = "multipart/form-data">
+           <input type = "submit" value = "Use Demo Video" name = "demo"/>
+      </form>
+      <ol/>
+{% endblock %}

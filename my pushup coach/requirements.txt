@@ -1,0 +1,12 @@
+Flask
+gunicorn
+numpy
+pandas
+scikit-learn
+matplotlib
+
+mediapipe
+flask_wtf
+wtforms
+werkzeug
+opencv-python-headless

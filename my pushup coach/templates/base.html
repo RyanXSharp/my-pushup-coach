@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 1px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 500px;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  padding: 1;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  background-color: #f1f1f1;
+  height: 500px;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 25px;
+}
+
+a {
+  font-size: 25px;
+}
+
+li {
+  font-size: 25px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    height: auto;
+  }
+  
+  article {
+    width: 100%;
+    height: 800;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>My Push-Up Coach</h2>
+</header>
+
+<section>
+  <nav>
+    <ul> {% block links %} {% endblock %} </ul>
+  </nav>
+  
+  <article>
+    {% block content %} {% endblock %}
+  </article>
+</section>
+
+<footer>
+  <p>Made by Ryan Sharp</p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block links %}
+  <a href="{{ url_for('home') }}">Go Back</a>   
+{% endblock %}
+
+{% block content %}  
+  <h1>How I work</h1>
+  <ol type="1">
+      <li>A Python library called Mediapipe detects the coordinates of your joints in the video.</li>
+      <li>A machine learning model uses those coordinates to detect if you are in push-up position.</li>
+      <li>Other models then use those coordinates to look for imperfections in your form.</li>
+      <li>All detections are recorded, and then a workout summary is generated.</li>
+  </ol>
+{% endblock %}
